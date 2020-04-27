@@ -1,26 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Display} from './display.js';
+import {Fetch} from './fetch'
 
-function App() {
+const App = () => {
+
+
+const data = Fetch('https://opensky-network.org/api/flights/departure?airport=EGLL&begin=1583830800&end=1583832600')
+
+
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <div>{}</div>
+    <Display results={data} />
     </div>
-  );
+  )
 }
 
 export default App;
