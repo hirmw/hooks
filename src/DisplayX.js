@@ -3,6 +3,7 @@ import React from "react";
 
 export const Display = (props) =>  {
 
+
     const style ={
         margin: 'auto',
         left: '50%',
@@ -15,7 +16,7 @@ export const Display = (props) =>  {
     }
 
 return (
-    <div>
+    <div  style={style} >
 
         {props.results.map(x => <div style={style}> {x.callsign} </div>)}
   
